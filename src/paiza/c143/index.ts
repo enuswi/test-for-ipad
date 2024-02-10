@@ -31,3 +31,4 @@ class FileNameValueObject {
   }
   
   const converted = FileNameValueObject.create('aaa')
+  console.log(converted.get())
