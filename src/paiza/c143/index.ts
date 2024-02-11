@@ -6,12 +6,12 @@
  * ・「-」は、連続してはいけない
  */
 
-class FileNameValueObject {
+export class FileNameValueObject {
     private value: string;
-    constructor(fileName: string) {
+    private constructor(fileName: string) {
       // バリデート処理（今回は多分なくてもOK）
       this.validate(fileName)
-  
+
       this.value = this.convert(fileName)
     }
   
@@ -29,6 +29,3 @@ class FileNameValueObject {
   
     public get = (): string => this.value
   }
-  
-  const converted = FileNameValueObject.create('aaa')
-  console.log(converted.get())
